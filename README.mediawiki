@@ -1,0 +1,14 @@
+<h2>About</h2>
+Timothy S. McKenna<br/>
+<a href="http://sitebuilt.net">http://sitebuilt.net</a><br/>
+<a href="mailto:mckenna.tim@gmail.com">mckenna.tim@gmail.com</a><br/>
+</a><br/>
+
+<h3>Design a better income tax system. (under development)</h3>
+<p>
+Using published IRS data and other sources, this mobile device app creates a model of the income tax system in the US.
+</p><p>
+It explains the system and allows user to manipulate all the variables of brackets and rates on earned and unearned income to design a better system that raises the same amount of money.
+</p>
+<h4>Motivation</h4>
+<h5>Pedigogical</h5>
