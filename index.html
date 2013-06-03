@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Mckennatim : main page" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Mckennatim</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/mckennatim">View on GitHub</a>
+
+          <h1 id="project_title">GitHub - Timothy S. McKenna</h1>
+          <h2 id="project_tagline">projects page</h2>
+<p><a href="http://sitebuilt.net"></a><a href="http://sitebuilt.net">http://sitebuilt.net</a><br><a href="mailto:mckenna.tim@gmail.com"></a><a href="mailto:mckenna.tim@gmail.com">mckenna.tim@gmail.com</a><br><br></p>          
+<div id="menu">
+  <ul>
+    <li><a href="#elec" title="electronic projects + arduino" >electronics</a></li>        
+    <li><a href="#s2g" title="shared shopping list app">stuff2get </a></li>
+    <li><a href="#ltf" title="design a better tax system" >levelthefield</a></li>
+    <li><a href="#st" title="put together a team for a project" >soupteam</a></li>
+    <li><a href="#misc" title="scripts for assessments and mediawiki hacks" >misc</a></li>
+  </ul>
+</div>​
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+
+<h2>GitHub Repositories</h2>
+
+<h3><a id="elec" href="https://github.com/mckennatim/Arduino">Electronics</a></h3>
+
+<p>Electronic Projects<br>
+<a href="https://github.com/mckennatim/Arduino">repository: Electronics</a><br/>
+<a href="http://sitebuilt.net/wiki/electronics">description wiki page</a></p>
+<p>
+<h4><a id="elec" href="https://github.com/mckennatim/cascada">Cascada-warter control project
+</a></h4>
+little app to communicate between browser/app and microcontroller to run a small waterfall
+
+We have two little ponds in the yard fed by the rainwater from the roof. They are at the base of a big outcropping of roxbury pudding stone. Water is pumped from the lower pond to the upper pond and from the upper pond up the side of the ledge.
+
+{{#ev:youtube|f1B5lWW0P_o}}
+
+There is an app, "cascada" that starts the pumps and energizes the circuits to turn on the waterfall and control the level of the lower pond. 
+
+If it hasn't rained in a while, over time water evaporates and leaks out. The level of the pond is controlled using a $10 lawn sprinkler relay to inject water into the pond when the falls below a certain level. Water gets added while the pumps are on until it reaches the max level then it goes off. If you turn on the pumps again it doesn't continue filling but waits to inject water til the water falls to the low water sensor. 
+
+The water level control is independent of the pond timer, is located in its own circuit box on the porch and is activated whenever the waterfall is on.
+
+The other circuit is connected to the house ethernet and contains a server, relays and timers to turn the system on and off. Its microcontroller is connected to an [[Enc28j60]] chip that implements a server capable of delivering GET string variables to the microcontroller. 
+
+The app is written in HTML5/javascript, resides on http://cascada.sitebuilt.net and uses $.get to send a string to a php script on the that server which transfers it by curl to the external Enc28j60 server located in the house. It does this via a http://www.noip.com/ since the home network's IP can change. It tells the controller which circuit it wants on and for how long.
+
+<h4><a id="elec" href="https://github.com/mckennatim/hsc">hvac.sitebuilt.net
+</a></h4>
+The Heating system control project is playing with using the arduino with an ethernet shield, a LAMP server and HTML5 javascript for online control and monitoring of the 7 zones of the home heating system.
+</p>
+
+<h3><a id="ltf" href="https://github.com/mckennatim/Levelthefield">LevelThe Field</a></h3>
+
+<p>Design a better Income Tax System<br>
+<a href="https://github.com/mckennatim/Levelthefield">repository: LevelTheField</a><br/>
+<a href="http://www.openappmkt.com/app/5092ceb0f182ae000200490a/LevelTheField.US">openappmkt.com: LevelTheField.US</a><br/>
+<a href="http://levelthefield.sitebuilt.net">appsite: http://levelthefield.sitebuilt.net</a><br/>
+<a href="http://sitebuilt.net/wiki/levelthefield">description wiki page</a>
+</p>
+
+<p>
+Using published IRS data and other sources, this HTML5 app is designed for mobile devices and creates a model of the income tax system in the US.
+</p><p>
+It explains the system and allows user to manipulate all the variables of brackets and rates on earned and unearned income to design a better system that raises the same amount of money. A javascript, jquery-mobile, HTML5 app.
+</p>
+<h3><a id="s2g" href="https://github.com/mckennatim/Stuff2Get">Stuff2Get</a></h3>
+
+<p>Share a list on any device<br>
+<a href="https://github.com/mckennatim/Stuff2Get">repository: Stuff2Get</a><br/>
+<a href="http://www.openappmkt.com/app/5092bd95f182ae0002004064/stuff2get">openappmkt.com: Stuff2Get</a><br/>
+<a href="http://stuff2get.sitebuilt.net">appsite: http://stuff2get.sitebuilt.net</a><br/>
+<a href="http://sitebuilt.net/wiki/stuff2get">description wiki page</a></p>
+<p>
+You can have shared shopping lists on any mobile device. Update list on one device and the updates show up on another. Stuff2Get is a javscript, jquery-mobile HTML5 app. Server is php/mysql.
+</p>
+<h3><a id="st" href="https://github.com/mckennatim/OBSoup">OBsoup</a></h3>
+
+<p>Project organizer.<br>
+<a href="https://github.com/mckennatim/OBsoup">repository: OBSoup</a><br/>
+<a href="http://soupteam.sitebuilt.net">appsite: http://soupteam.sitebuilt.net</a><br/>
+<a href="http://sitebuilt.net/wiki/soupteam">description wiki page</a></p>
+<p>
+The soupteam.com site is one way to organize a project that is going to take place at a certain date/time. You can create project and then send out the word to recruit a team to pull it off. Most pages are created from PHP. Uses MYSQL javascript jquery and jeditable to allow in-browser editing of database.
+</p>
+
+
+<h3 id="misc">Miscellaneous Scripts</h3>
+<h4><a name='Assess' href="https://github.com/mckennatim/assess">Assess</a></h4>
+<p>A collection of scripts written to support computer use in the classroom for my Humanities classes from 2005-2011 at Parkway Academy of Technology and Health (PATH), a BostonPublic Schools High School. Each student at PATH had a laptop. 
+&lt;br/&gt;</p>
+<p>The main computer platform for my courses was Mediawiki. Each student had an account on the wiki and used their account pages as scratchpad, a workbook, as a place for in-class writing, for quizzes and exams and for all the stages of essays and research papers. </p>
+<a name='mediawik%20scripts'></a><h5>mediawik scripts</h5>
+
+<p>Some scripts allow me to interact with medaiwiki through its API, doing things like injecting pages into students' acount pages. Check the <a href='https://github.com/mckennatim/assess/tree/master/WikiBot'>WikiBot </a> and <a href='https://github.com/mckennatim/assess/tree/master/mw'>mw</a> directories. Other scripts helped me to create general course content that would show up on the course wiki's. Most were in PHP and allowed for interaction with the MYSQL databases.</p>
+<p>There were course wikis for most of the courses I taught, with an new version every year. Other supporting technology included forums and blogs. Course Wiki's have been archived and some are still hosted in read-only format. Some links to course wikis:</p>
+<dl>
+<dt><a href='http://www.pathboston.com/hum4'>http://www.pathboston.com/hum4</a></dt>
+<dd>- a senior level Humanities course focusing on the literature and history of the world from 1500-present</dd>
+<dt><a href='http://www.pathboston.com/hum3'>http://www.pathboston.com/hum3</a></dt>
+<dd>- a junior level Humanities class focusing on the literature and history of the United States from post-Reconstruction - present day</dd>
+<dt><a href='http://www.pathboston.com/hum2'>http://www.pathboston.com/hum2</a></dt>
+<dd>-a sophomore Humanities class focusing on the literature and history of the United States from Antebellum America through Reconstruction</dd>
+<dt><a href='http://www.pathboston.com/poets'>http://www.pathboston.com/poets</a></dt>
+<dd>- a freshman level course in poetry, mythology and self expression with links to student blogs at <a href='http://pathpoets.blogspot.com/'>http://pathpoets.blogspot.com/</a></dd>
+</dl>
+<a name='data'></a><h5>data</h5>
+
+<p>There was a database with  of article links for material used in each course. These were indexed by course, by unit and standards. Additionally were two other databases, one for questions on the course materials with references into the text and with various multiple choice and short answer responses that connected to those questions. The other database was of vocabulary words from the source materials including the context in which it appeared, other contexts from within and outside the course (some student created), definitions, and parts of speech.  Finally there was the database of the quizzes and all student responses to every question which allowed for item analysis.</p>
+<a name='general%20work%20flow'></a><h5>general work flow</h5>
+
+<p>In general, whenever a new article or excerpt was going to be used in a class, I would first process get it in the database and all indexed up.</p>
+<a name='vocab%20processing'></a><h6>vocab processing scripts</h6>
+
+<p>Then I'd run scripts to extract vocabulary words and terminology. <a href='http://www.visualthesaurus.com/vocabgrabber/'>Visual Thesaurus vocabgrabber</a> (if you are a paying customer) allows you to send it a text file, book chapter, whatever and then it will identify vocabulary words based upon lots of criteria. It produces a list of words along with the sentence they showed up in. </p>
+<p><a href='https://github.com/mckennatim/assess/tree/master/vocabgrab'>Vocabgrab</a> Takes the list produced from visual thesaurus stores it and scrapes the web for definitions and then adds them to the database. </p>
+<p><a href='https://github.com/mckennatim/assess/tree/master/vocabgrid'>Vocabgrid</a> allows the teacher to quickly review those automatically collected definitions to make sure they are the appropriate definitions. It allowed for in-cell editing of webpage tables. This I wrote in AJAX , using an pretty early version. Alas it only works in an old version of a Firefox Browser from back then. (Now I do all my AJAX through Jquery).</p>
+<p><a href='https://github.com/mckennatim/assess/tree/master/vodb2'>vodb2</a> contains a few utility programs to get words, definitions and contexts for an article out of the database and into an HTML quiz, a smartboard quiz, or a <a href='http://quizlet.com/1370428/macbeth-flash-cards/'>quizlet</a> or wordlist or a <a href='http://www.pathboston.com/hum3/Glossary'>glossary</a>.</p>
+<a name='question%20processing'></a><h6>question processing scripts</h6>
+
+<p>All questions on the readings were collected stored and indexed. Some were in moodle format, and some were in mediawiki format. </p>
+<p><a href='https://github.com/mckennatim/assess/tree/master/wiki2db'>wiki2db</a> and <a href='https://github.com/mckennatim/assess/tree/master/q2db'>q2db</a> are examples of a parsers that extracts questions from mediawiki format and sends them to a database.</p>
+<p><a href='https://github.com/mckennatim/assess/tree/master/qdb2'>qdb2</a> and <a href='https://github.com/mckennatim/assess/tree/master/combine'>combine</a> are scripts to create quizzes from the database according to assorted criteria. The quizzes are then produced in various media including smartboard, smartphone, printed or browser. They are randomized on a question by question and within multiple choice responses so that each quiz looks different. Scores are reported immediately and sent to a database that allows for item analysis.</p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Mckennatim maintained by <a href="https://github.com/mckennatim">mckennatim</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
