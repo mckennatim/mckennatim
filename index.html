@@ -38,6 +38,36 @@
       <section id="main_content" class="inner">
 
 <h2>GitHub Repositories</h2>
+
+<h3><a id="elec" href="https://github.com/mckennatim/Arduino">Electronics</a></h3>
+
+<p>Electronic Projects<br>
+<a href="https://github.com/mckennatim/Arduino">repository: Electronics</a><br/>
+<a href="http://sitebuilt.net/wiki/electronics">description wiki page</a></p>
+<p>
+<h4><a id="elec" href="https://github.com/mckennatim/cascada">Cascada-warter control project
+</a></h4>
+little app to communicate between browser/app and microcontroller to run a small waterfall
+
+We have two little ponds in the yard fed by the rainwater from the roof. They are at the base of a big outcropping of roxbury pudding stone. Water is pumped from the lower pond to the upper pond and from the upper pond up the side of the ledge.
+
+{{#ev:youtube|f1B5lWW0P_o}}
+
+There is an app, "cascada" that starts the pumps and energizes the circuits to turn on the waterfall and control the level of the lower pond. 
+
+If it hasn't rained in a while, over time water evaporates and leaks out. The level of the pond is controlled using a $10 lawn sprinkler relay to inject water into the pond when the falls below a certain level. Water gets added while the pumps are on until it reaches the max level then it goes off. If you turn on the pumps again it doesn't continue filling but waits to inject water til the water falls to the low water sensor. 
+
+The water level control is independent of the pond timer, is located in its own circuit box on the porch and is activated whenever the waterfall is on.
+
+The other circuit is connected to the house ethernet and contains a server, relays and timers to turn the system on and off. Its microcontroller is connected to an [[Enc28j60]] chip that implements a server capable of delivering GET string variables to the microcontroller. 
+
+The app is written in HTML5/javascript, resides on http://cascada.sitebuilt.net and uses $.get to send a string to a php script on the that server which transfers it by curl to the external Enc28j60 server located in the house. It does this via a http://www.noip.com/ since the home network's IP can change. It tells the controller which circuit it wants on and for how long.
+
+<h4><a id="elec" href="https://github.com/mckennatim/hsc">hvac.sitebuilt.net
+</a></h4>
+The Heating system control project is playing with using the arduino with an ethernet shield, a LAMP server and HTML5 javascript for online control and monitoring of the 7 zones of the home heating system.
+</p>
+
 <h3><a id="ltf" href="https://github.com/mckennatim/Levelthefield">LevelThe Field</a></h3>
 
 <p>Design a better Income Tax System<br>
@@ -72,16 +102,6 @@ You can have shared shopping lists on any mobile device. Update list on one devi
 The soupteam.com site is one way to organize a project that is going to take place at a certain date/time. You can create project and then send out the word to recruit a team to pull it off. Most pages are created from PHP. Uses MYSQL javascript jquery and jeditable to allow in-browser editing of database.
 </p>
 
-<h3><a id="elec" href="https://github.com/mckennatim/Arduino">Arduino</a></h3>
-
-<p>Electronic Projects<br>
-<a href="https://github.com/mckennatim/Arduino">repository: Electronics</a><br/>
-<a href="http://sitebuilt.net/wiki/electronics">description wiki page</a></p>
-<p>
-The water control project as yet has no code, just running off a truth table.
-
-The Heating system control project is playing with using the arduino with an ethernet shield, a LAMP server and HTML5 javascript for online control and monitoring of the 7 zones of the home heating system.
-</p>
 
 <h3 id="misc">Miscellaneous Scripts</h3>
 <h4><a name='Assess' href="https://github.com/mckennatim/assess">Assess</a></h4>
