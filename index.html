@@ -41,19 +41,39 @@
 
 <h2>GitHub Repositories</h2>
 
-<h4><a id="elec" href="https://github.com/mckennatim/hsc">hvac.sitebuilt.net
-</a></h4>
-<article id=”hvac”>
-</article>
-The Heating system control project is playing with using the arduino with an ethernet shield, a LAMP server and HTML5 javascript for online control and monitoring of the 7 zones of the home heating system.
-</p>
-
 <h3><a id="elec" href="https://github.com/mckennatim/Arduino">Electronics</a></h3>
 
 <p>Electronic Projects - The Internet of Things<br>
 <a href="https://github.com/mckennatim/Arduino">repository: Electronics</a><br/>
 <a href="http://sitebuilt.net/wiki/electronics">description wiki page</a></p>
 <p>
+
+<h4><a id="elec" href="https://github.com/mckennatim/hsc">hvac.sitebuilt.net
+</a></h4>
+<article id=”hvac”>
+</article>
+<p>The most advanced and easy to use user interface these days is probably the one contained in your smartphone or tablet. Apps are easy to use, interactive and readily update-able. The interface on your programmable thermostat probably would not be high on that list. And if you have more than one heating zone then the difficulty is multiplied.
+
+Replace those thermostats with temperature sensors and control the whole house from one interface. Slip a microcontroller device between the thermostat connections and the heating/cooling system. Connect it to the home network and you are ready to go. From 1 zone to 8 zones, it will monitor and control them all.
+
+Start collecting data on your energy use. Which zone calls for heat the most? Which takes longest to heat up? How much would it cost to be a little warmer? How much is setting back the thermostat saving me in my house? Optimize your hydronic system by running the boiler at a lower temperature on a warmer day. 
+
+Overriding any zones program is easy and can be done remotely from any connected device, phone tablet or browser. 
+
+An Avr microcontroller  takes in temperature readings from multiple locations. At the control room the AVR hub polls temperature and for each zone knows the set temperature, the default temperature and whether or not a zone is ON and how long it has been on. If it does not hear from the (linux) scheduler then it falls back to act as a multi-zone thermostat set at the default temperatures. 
+
+The scheduler would take temperature data from the AVR client and would know the schedule. Whenever a schedule change point would come up, it would notify the AVR and instruct it to change the set point.
+
+The controller would on the client probably an HTML5/javascript client. Here you can read the temperatures and view the schedule. You can override or change the schedule.
+
+<br>
+<a href="https://github.com/mckennatim/arduino/tree/master/hsc_mega">repository: microcontroller code</a><br/>
+<a href="https://github.com/mckennatim/hsc">repository: rest api</a><br/>
+<a href="https://github.com/mckennatim/ha">repository: app code</a><br/>
+<a href="">appsite: <i>no simulated site yet</i></a><br/>
+<a href="http://www.sitebuilt.net/wiki/Online_heating_system_control_project">description wiki page</a>
+</p>
+
 <h4><a id="elec" href="http://sitebuilt.net/wiki/Water_control_project">Cascada-water control project
 </a></h4>
 <p>little app to communicate between browser/app and microcontroller to run a small waterfall<br>
