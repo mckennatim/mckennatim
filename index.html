@@ -26,6 +26,7 @@
 <div id="menu">
   <ul>
     <li><a href="#node" title="nodeJS and TDD">node+TDD</a></li>
+    <li><a href="#todox" title="BZtodo-An exercise in MVC">todoCompare</a></li>    
     <li><a href="#elec" title="electronic projects + arduino" >electronics</a></li>        
     <li><a href="#s2g" title="shared shopping list app">stuff2get </a></li>
     <li><a href="#ltf" title="design a better tax system" >levelthefield</a></li>
@@ -55,6 +56,26 @@ The basic architecture is to create a REST API that contains a good part of the 
 </p><p>
 Currently hosted locally but I've just got an new vps that will be a testbed for deploying node apps.  
 </p>
+
+<h3><a id="node" href="https://github.com/mckennatim/BZtodo" >BZtodo-An exercise in MVC</a></h3>
+<p>MVC in jQuery and AngularJS with PHP/MYSQL backend<br>
+<a href="https://github.com/mckennatim/BZtodo">repository: BZtodo</a><br/>
+<a href="https://github.com/mckennatim/BZtodo/blob/master/README.mediawiki">description: README</a></p>
+
+<p>
+Moving from OO jQuery PHP/MYSQL to Agile test-driven MVC, this code is an exercise in front-end development comparing jQuery to AngularJS. It's a simple todo app. I had get something done in an evening to show at a job interview. I quickly jettisoned my vow to only do test-driven development since I'm still learning TDD so it would have slowed me down.</p>
+
+<h5>/client</h5>
+
+<p>First it was a quick and dirty attempt to write in jQuery in a way that separates, as much as possible, the model, the controller and the view. Still I end up with HTML inside javascript strings, which is less than satisfying.</p>
+
+<p>I took a branch into using handlebars for templating but got a little frustrated with the simple method of script tags since I've come to be dependent on Sublime text's formatting and completions which no longer work inside script tags. It seems much better to have partial views as html files but then you run into the problem of including and compiling those files as some pre-process script. Since windows .bat kinda sucks it forces you to think of using something like grunt. I'll wait to learn grunt until I have more things to deploy.</p>
+running on http://cascada.sitebuilt.net/BZtodo/client/
+<h5>/clientNg</h5>
+<p>
+Last night I decided it made more sense to use handlebars in a framework than using it raw. So I continue my MVC frameworks education using AngularJS for the same simple todo app. The state of this will be evolving and get pushed to http://cascada.sitebuilt.net/BZtodo/clientNg/ in stages when I get a chance to work on it.  
+</p>
+
 
 <h3><a id="elec" href="https://github.com/mckennatim/Arduino">Electronics</a></h3>
 
