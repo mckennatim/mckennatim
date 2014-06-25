@@ -5,9 +5,9 @@
     <meta charset='utf-8' />
     <meta http-equiv="X-UA-Compatible" content="chrome=1" />
     <meta name="description" content="Mckennatim : main page" />
-
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-    <script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/my.css">
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type='text/javascript' src="javascripts/main.js"></script>
 </head>
     <title>Mckennatim</title>
@@ -22,18 +22,18 @@
 
           <h1 id="project_title">GitHub - Timothy S. McKenna</h1>
           <h2 id="project_tagline">projects page</h2>
-<p><a href="http://sitebuilt.net"></a><a href="http://sitebuilt.net">http://sitebuilt.net</a><br><a href="mailto:mckenna.tim@gmail.com"></a><a href="mailto:mckenna.tim@gmail.com">mckenna.tim@gmail.com</a><br><br></p>          
-<div id="menu">
-  <ul>
-    <li><a href="#node" title="nodeJS and TDD">node+TDD</a></li>
-    <li><a href="#todox" title="BZtodo-An exercise in MVC">todo_comp</a></li>    
-    <li><a href="#elec" title="electronic projects + arduino" >electronics</a></li>        
-    <li><a href="#s2g" title="shared shopping list app">stuff2get </a></li>
-    <li><a href="#ltf" title="visualize a better tax system" >levelthefield</a></li>
-    <li><a href="#st" title="put together a team for a project" >soupteam</a></li>
-    <li><a href="#misc" title="scripts for assessments and mediawiki hacks" >misc</a></li>
-  </ul>
-</div>​
+          <p><a href="http://sitebuilt.net"></a><a href="http://sitebuilt.net">http://sitebuilt.net</a><br><a href="mailto:mckenna.tim@gmail.com"></a><a href="mailto:mckenna.tim@gmail.com">mckenna.tim@gmail.com</a><br><br></p>          
+          <div id="menu" >
+            <ul class='nav navbar-nav'>
+              <li><a href="#node" title="nodeJS and TDD">node+TDD</a></li>
+              <li><a href="#todox" title="BZtodo-An exercise in MVC">todo_comp</a></li>    
+              <li><a href="#elec" title="electronic projects + arduino" >electronics</a></li>        
+              <li><a href="#s2g" title="shared shopping list app">stuff2get </a></li>
+              <li><a href="#ltf" title="visualize a better tax system" >levelthefield</a></li>
+              <li><a href="#st" title="put together a team for a project" >soupteam</a></li>
+              <li><a href="#misc" title="scripts for assessments and mediawiki hacks" >misc</a></li>
+            </ul>
+          </div>​
         </header>
     </div>
 
@@ -43,20 +43,30 @@
 
 <h2>GitHub Repositories</h2>
 
-<h3><a id="node" href="https://github.com/mckennatim/stuff-rest" >REST API in NodeJs and Mongo using TDD</a></h3>
+<h3><a id="node" href="https://github.com/mckennatim/s2g-api" >REST API in NodeJs and Mongo using TDD</a></h3>
 <p>Developing a back-end using test-driven development<br>
-<a href="https://github.com/mckennatim/stuff-rest">repository: stuff-rest</a><br/>
-<a href="https://github.com/mckennatim/stuff-rest/blob/master/README.mediawiki#description">description: full README</a></p>
+<a href="https://github.com/mckennatim/s2g-api">repository: s2g-api</a><br/>
+<a href="https://github.com/mckennatim/s2g-api#description">description: full README</a></p>
 
 <p>
-This is a rewrite of PHP/MYSQL mobile-first app for shared shopping lists. While I could certainly refactor that existing app into a MVC Agile test driven piece of clean code, I prefer to get some experience the Angular/NodeJS/Express/MongoDb stack. More importantly, I need to somehow shock my system into the paradigm of building an application by the iterative process of decribing a feature, writing a test for it that fails, writing code to implement a passing test, re-factor and loop.So far it is working and I see a future for this approach for all my code.
+This is the REST api for a rewrite of PHP/MYSQL mobile-first app for shared shopping lists. While I could certainly refactor that existing app into a MVC Agile test driven piece of clean code, I prefer to get some experience the Angular/NodeJS/Express/MongoDb stack. More importantly, I need to somehow shock my system into the paradigm of building an application by the iterative process of decribing a feature, writing a test for it that fails, writing code to implement a passing test, re-factor and loop.So far it is working and I see a future for this approach for all my code.
 </p>
 <p>
 The basic architecture is to create a REST API that contains a good part of the business logic or MODEL of the system. The api communicates in JSON to a front end encapsulating the CONTROLLER and VIEW.
 </p><p>
-Currently hosted locally but I've just got an new vps that will be a testbed for deploying node apps.  
+Currently running on a VPS using Nginx as reverse proxy for subdomains of parleyvale.com running Node servers. Can run as HTTPS but haven't yet plopped down the $9/year for SSL certificate.   
 </p>
 
+<h3><a id="ng" href="https://github.com/mckennatim/s2g-ng" >Angular JS client for shoppping list app</a></h3>
+<p>Developing a front-end using javascript framework<br>
+<a href="https://github.com/mckennatim/s2g-ng">repository: s2g-ng</a><br/>
+<a href="https://github.com/mckennatim/s2g-ng#description">description: full README</a></p>
+
+<p>
+Authentication is by apikey. Server then creates a token that is sent with every request. This app is for multiple users sharing access to shopping lists from multiple, sometimes shared, devices. Angular and Node will need to deal with cross domain issues.
+</p>
+<p>While the database is in MongoDb on the server, this app will explore the possibilities of using local storage as the data source for the views and controllers. Every change however will get sent to the server, but the Angular app need not wait for the update, communication with the serrver will seem to be happening in the background. Changes written into local storage will be timestamped and some kind of polling mechanism will keep the client and server data stores in synch.
+</p>
 <h3><a id="todox" href="https://github.com/mckennatim/BZtodo" >BZtodo-An exercise in MVC</a></h3>
 <p>MVC in jQuery and AngularJS with PHP/MYSQL backend<br>
 <a href="https://github.com/mckennatim/BZtodo">repository: BZtodo</a><br/>
