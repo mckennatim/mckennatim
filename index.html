@@ -50,13 +50,19 @@
   <li><a  href="https://gist.github.com/mckennatim" title="">gists/jsbins</a></li>
   <li><a  href="http://jsfiddle.net/user/mckennatim/fiddles/" title="">fiddles</a></li>
 </ul>
-<h4><a href="http://plnkr.co/edit/8Q0kmA5Db9glOfveH5Kx?p=preview" title="">Checking online status in AngularJS app</a></h4>
+<h4><a href="http://embed.plnkr.co/9qE2M9aQ4mCKYYREOPOD/preview">Syncing lists from multiple users using set algebra</a></h4>
+<p>In an app in which multiple people create and edit the same list, How to sync them together?</p>
+<p>An app needs to be able to function to a certain extent even when not connected to the internet. How do you synchronize with other users who may have changed the list while you were making offline changes?</p>
+
+<h4><a href="http://embed.plnkr.co/8Q0kmA5Db9glOfveH5Kx/preview" title="">Checking online status in AngularJS app</a></h4>
 <p>Often apps can do useful work while offline. While online and connected to the server additional functionality is enabled. It is helpful to know if a device is connected to the internet and if its server is available.</p>
 <p>You might as well check online status every time your app makes an http request. If you wanted to periodically update your online status you could make a simple http request and intercept its response to set the state of a $rootscope variable that could then be watched by any controller.</p>
 <p>Intercepting http calls, setting some rootScope variables and watching them from a controller, and, polling the server periodically to update everything, are described.</p>
 
 <h4><a href="http://plnkr.co/edit/Axo1s9EMiB8nE9dP0EE4?p=preview" title="">Promises between service and controller in AngularJS</a></h4>
 <p>Calls to $http belong in a service. SinceAJAX calls are asynchronous you have to return a promise that will be deferred until the callback. You can setup the promise in the service by including $q and then act on it when it returns in the controller.</p>
+<h4><a href="http://embed.plnkr.co/jyUJ6y64cBQDPTMXMWVb/preview">Detecting browser window focus in AngularJS</a></h4>
+<p>When using html5 built-in window.onfocus and window.blur you need to inject $window in the controller and after you update the $scope you need to $scope.apply() so angular knows about it.</p>
 
 <h3><a id="node" href="https://github.com/mckennatim/s2g-api" >REST API in NodeJs and Mongo using TDD</a></h3>
 <p>Developing a back-end using test-driven development<br>
@@ -75,6 +81,7 @@ Currently running on a VPS using Nginx as reverse proxy for subdomains of parley
 <h3><a id="ng" href="https://github.com/mckennatim/s2g-ng" >Angular JS client for shoppping list app</a></h3>
 <p>Developing a front-end using javascript framework<br>
 <a href="https://github.com/mckennatim/s2g-ng">repository: s2g-ng</a><br/>
+<a href="http://stuff2get.sitebuilt.net">appsite: http://stuff2get.sitebuilt.net</a><br/>
 <a href="https://github.com/mckennatim/s2g-ng#description">description: full README</a></p>
 
 <p>
@@ -82,31 +89,12 @@ Authentication is by apikey. Server then creates a token that is sent with every
 </p>
 <p>While the database is in MongoDb on the server, this app will explore the possibilities of using local storage as the data source for the views and controllers. Every change however will get sent to the server, but the Angular app need not wait for the update, communication with the serrver will seem to be happening in the background. Changes written into local storage will be timestamped and some kind of polling mechanism will keep the client and server data stores in synch.
 </p>
-<h3><a id="todox" href="https://github.com/mckennatim/BZtodo" >BZtodo-An exercise in MVC</a></h3>
-<p>MVC in jQuery and AngularJS with PHP/MYSQL backend<br>
-<a href="https://github.com/mckennatim/BZtodo">repository: BZtodo</a><br/>
-<a href="https://github.com/mckennatim/BZtodo/blob/master/README.mediawiki">description: README</a></p>
-
-<p>
-Moving from OO jQuery PHP/MYSQL to Agile test-driven MVC, this code is an exercise in front-end development comparing jQuery to AngularJS. It's a simple todo app. I had get something done in an evening to show at a job interview. I quickly jettisoned my vow to only do test-driven development since I'm still learning TDD so it would have slowed me down.</p>
-
-<h5><a href="https://github.com/mckennatim/BZtodo/tree/master/client">client</a></h5>
-
-<p>First it was a quick and dirty attempt to write in jQuery in a way that separates, as much as possible, the model, the controller and the view. Still I end up with HTML inside javascript strings, which is less than satisfying.</p>
-
-<blockquote>I took a branch into using handlebars for templating but got a little frustrated with the simple method of script tags since I've come to be dependent on Sublime text's formatting and completions which no longer work inside script tags. It seems much better to have partial views as html files but then you run into the problem of including and compiling those files as some pre-process script. Since windows .bat kinda sucks it forces you to think of using something like grunt. I'll wait to learn grunt until I have more things to deploy.</blockquote>
-running on <a href="http://cascada.sitebuilt.net/BZtodo/client/">http://cascada.sitebuilt.net/BZtodo/client/</a>
-<h5><a href="https://github.com/mckennatim/BZtodo/tree/master/clientNg">clientNg</a></h5>
-<p>
-Last night I decided it made more sense to use handlebars in a framework than using it raw. So I continue my MVC frameworks education using AngularJS for the same simple todo app. The state of this will be evolving and get pushed to <a href="http://cascada.sitebuilt.net/BZtodo/clientNg/">http://cascada.sitebuilt.net/BZtodo/clientNg/</a> in stages when I get a chance to work on it.  
-</p>
-
 
 <h3><a id="elec" href="https://github.com/mckennatim/Arduino">Electronics</a></h3>
 
 <p>Electronic Projects - The Internet of Things<br>
 <a href="https://github.com/mckennatim/Arduino">repository: Electronics</a><br/>
-<a href="http://wiki.sitebuilt.net/electronics">description wiki page</a></p>
+<a href="http://wiki.sitebuilt.net/wiki/index.php?title=Electronics">description wiki page</a></p>
 </p>
 
 <h4><a id="elec" href="http://wiki.sitebuilt.net/Online_heating_system_control_project">Online heating system control project
@@ -130,15 +118,14 @@ The app runs PHP on the server and JavaScript on the client (mobile or computer)
 <a href="https://github.com/mckennatim/arduino/tree/master/hsc_mega">repository: microcontroller code</a><br/>
 <a href="https://github.com/mckennatim/hsc">repository: rest api</a><br/>
 <a href="https://github.com/mckennatim/ha">repository: app code</a><br/>
-<a href="http://wiki.sitebuilt.net/Online_heating_system_control_project">description wiki page</a>
+<a href="http://wiki.sitebuilt.net/wiki/index.php?title=Online_heating_system_control_project">description wiki page</a>
 </p>
 
-<h4><a id="elec" href="http://wiki.sitebuilt.net/Water_control_project">Cascada-water control project
+<h4><a id="elec" href="http://wiki.sitebuilt.net/wiki/index.php?title=Water_control_project">Cascada-water control project
 </a></h4>
 <p>little app to communicate between browser/app and microcontroller to run a small waterfall<br>
 <a href="https://github.com/mckennatim/cascada">repository: cascada</a><br/>
-<a href="http://cascada.sitebuilt.net">appsite: http://cascada.sitebuilt.net</a><br/>
-<a href="http://wiki.sitebuilt.net/Water_control_project">description wiki page</a>
+<a href="http://wiki.sitebuilt.net/wiki/index.php?title=Water_control_project">description wiki page</a>
 </p>
 <p>
 We have two little ponds in the yard fed by the rainwater from the roof. They are at the base of a big outcropping of roxbury pudding stone. Water is pumped from the lower pond to the upper pond and from the upper pond up the side of the ledge.<br/><br/>
@@ -159,7 +146,7 @@ The app is written in HTML5/javascript, resides on http://cascada.sitebuilt.net 
 <p>Visualize a better Income Tax System<br>
 <a href="https://github.com/mckennatim/Levelthefield">repository: LevelTheField</a><br/>
 <a href="http://levelthefield.sitebuilt.net">appsite: http://levelthefield.sitebuilt.net</a><br/>
-<a href="http://wiki.sitebuilt.net/levelthefield">description wiki page</a>
+<a href="http://wiki.sitebuilt.net/wiki/index.php?title=Levelthefield">description wiki page</a>
 </p>
 
 <p>
@@ -171,8 +158,7 @@ It explains the system and allows user to manipulate all the variables of bracke
 
 <p>Share a list on any device<br>
 <a href="https://github.com/mckennatim/Stuff2Get">repository: Stuff2Get</a><br/>
-<a href="http://stuff2get.sitebuilt.net">appsite: http://stuff2get.sitebuilt.net</a><br/>
-<a href="http://wiki.sitebuilt.net/stuff2get">description wiki page</a></p>
+<a href="http://wiki.sitebuilt.net/wiki/index.php?title=Stuff2get">description wiki page</a></p>
 <p>
 You can have shared shopping lists on any mobile device. Update list on one device and the updates show up on another. Stuff2Get is a javscript, jquery-mobile HTML5 app. Server is php/mysql.
 </p>
@@ -181,7 +167,7 @@ You can have shared shopping lists on any mobile device. Update list on one devi
 <p>Project organizer.<br>
 <a href="https://github.com/mckennatim/OBsoup">repository: OBSoup</a><br/>
 <a href="http://soupteam.sitebuilt.net">appsite: http://soupteam.sitebuilt.net</a><br/>
-<a href="http://wiki.sitebuilt.net/soupteam">description wiki page</a></p>
+<a href="http://wiki.sitebuilt.net/wiki/index.php?title=Soupteam">description wiki page</a></p>
 <p>
 The soupteam.com site is one way to organize a project that is going to take place at a certain date/time. You can create project and then send out the word to recruit a team to pull it off. Most pages are created from PHP. Uses MYSQL javascript jquery and jeditable to allow in-browser editing of database.
 </p>
@@ -195,7 +181,7 @@ The soupteam.com site is one way to organize a project that is going to take pla
 <a name='mediawik%20scripts'></a><h5>mediawik scripts</h5>
 
 <p>Some scripts allow me to interact with medaiwiki through its API, doing things like injecting pages into students' acount pages. Check the <a href='https://github.com/mckennatim/assess/tree/master/WikiBot'>WikiBot </a> and <a href='https://github.com/mckennatim/assess/tree/master/mw'>mw</a> directories. Other scripts helped me to create general course content that would show up on the course wiki's. Most were in PHP and allowed for interaction with the MYSQL databases.</p>
-<p>There were course wikis for most of the courses I taught, with an new version every year. Other supporting technology included forums and blogs. Course Wiki's have been archived and some are still hosted in read-only format. Some links to course wikis:</p>
+<p>There were course wikis for most of the courses I taught, with an new version every year. Other supporting technology included forums and blogs. Course Wiki's have been archived and some are still hosted in read-only format. Some links to course wikis:</p><i> currently offline</i>
 <dl>
 <dt><a href='http://pathboston.sitebuilt.net/hum4'>http://pathboston.sitebuilt.net/hum4</a></dt>
 <dd>- a senior level Humanities course focusing on the literature and history of the world from 1500-present</dd>
