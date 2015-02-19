@@ -101,7 +101,7 @@ Authentication is by apikey. Server then creates a token that is sent with every
 <a href="http://wiki.sitebuilt.net/wiki/index.php?title=Electronics">description wiki page</a></p>
 </p>
 
-<h4><a id="elec" href="http://wiki.sitebuilt.net/Online_heating_system_control_project">Online heating system control project
+<h4><a id="elec" href="http://wiki.sitebuilt.net/Online_heating_system_control_project">Online heating system control project - <i>prototype system currently running hydronic sytem with 7 zones</i>
 </a></h4>
 
 <p>The most advanced and easy to use user interface these days is probably the one contained in your smartphone or tablet. Apps are easy to use, interactive and readily update-able. The interface on your programmable thermostat probably would not be high on that list. And if you have more than one heating zone then the difficulty is multiplied.<br/><br/>
@@ -117,6 +117,8 @@ An Avr microcontroller  takes in temperature readings from multiple locations. A
 The restAPI contains the model of system, the temperature/relay data from the AVR client and the model of those sensors and relays relation to the rooms, devices and locations in the house as well as the scheduling model. It also contains the controller for the microcontrller; whenever a schedule change point comes up, it notifies the AVR and instruct it to change the set point.<br/><br/>
 
 The app runs PHP on the server and JavaScript on the client (mobile or computer). The server resonds to client requests through AJAX. Views are generated on the client, the controllers are partly on the server and partly in javascript. The process of creating of modifying a schedule occurs entirely on the client and is only interacts with the server and API once complete.  <br/>
+
+<p>System redesign in process</p>
 
 <br>
 <a href="https://github.com/mckennatim/arduino/tree/master/hsc_mega">repository: microcontroller code</a><br/>
