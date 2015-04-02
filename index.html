@@ -51,7 +51,14 @@
   <li><a  href="https://github.com/mckennatim/boggedbus/blob/master/README.md" title="">documentation</a></li>
 </ul>
 <h4><a href="http://hubhacks2.challengepost.com/">HubHacks2 - Visualizing a Thriving, Healthy, and Innovative Boston</a></h4>
+<p>A graphical analytic tool for finding how fast the buses are moving over different sections of their route. This application was written as an entry in the HubHacks2 hackathon in March of 2015.</p>
+<p>This project uses the Hubhacks2 data provided by the MBTA and combines it with schedule and shape data and the google map API v3.0 .</p> <p>
 
+Technologies: GeoJSON, Postgresql, PostGis, NodeJS  Nginx , Javascript, AngularJS, MongoDB, mapsAP!3
+</p>
+Building the data model was donewith the Potgresql relational database acting on files published periodically by the MBTA in directory of csv files called MBTA_GTFS. Once the static transformations, queries and joins were accomplished, what was left was GeoJSON objects representing the the collection of segments between all stops and their properties (such as distance between stops). They were assembled into a  feature collection for each route, those route JSON objects were then stored in a MongoDb. </p> <p>
+
+The application is then driven by the timePointCrossing data. This collection of prior real-time data, gives us the time each bus on each route arrives and departs at 10 points along its route at every time of the day for the days in February and March that were included in the data. That dataset is queried  (Postgres) every time you press MapIt. Before the map is displayed the data on those ten stops per route is turned ito durations between stops that is averaged over all the buses running in a half hour window from the user selected time. The properties of the GeoJSON object for the route are then modified and then it is passed into the map along with styles that depend on the speed property of each stop to stop leg. The duration between stops is based on realtime data whenever it is available and scheduled data when it is not. (That's why those MBTA apps are sometimes not actually realtime)</p>
 <h3><a id="gists" href="http://plnkr.co/users/mckennatim/favorites" title="">gists, fiddles and plunks</a></h3>
 <ul>
   <li><a  href="http://plnkr.co/users/mckennatim/favorites" title="">plunks(clearest code)</a></li>
