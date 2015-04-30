@@ -97,16 +97,16 @@ The basic architecture is to create a REST API that contains a good part of the 
 Currently running on a VPS using Nginx as reverse proxy for subdomains of parleyvale.com running Node servers. Can run as HTTPS but haven't yet plopped down the $9/year for SSL certificate.   
 </p>
 
-<h3><a id="ng" href="https://github.com/mckennatim/s2g-ng" >Angular JS client for shoppping list app</a></h3>
+<h3><a id="ng" href="https://github.com/mckennatim/s2g" >Angular JS client & server for shoppping list app</a></h3>
 <p>Developing a front-end using javascript framework<br>
-<a href="https://github.com/mckennatim/s2g-ng">repository: s2g-ng</a><br/>
+<a href="https://github.com/mckennatim/s2g">repository: s2g-ng</a><br/>
 <a href="http://stuff2get.sitebuilt.net">appsite: http://stuff2get.sitebuilt.net</a><br/>
 <a href="https://github.com/mckennatim/s2g-ng#description">description: full README</a></p>
 
 <p>
-This is a straight port of an old Jquery/PHP/MYSQL to Angular/Node/Mongo. As such it does not take advantage of the cooler features of the new technologies. But it runs and is in use by a dozen people.</p>
+The deployed app is a straight port of an old Jquery/PHP/MYSQL to Angular/Node/Mongo. As such it does not take advantage of the cooler features of the new technologies. But it runs and is in use by a dozen people.</p>
 <p>
-In the works is an alpha version that  is heavily directive/module/component based using socket.io to push data from server to client. That is proceeding as I immerse myself in the upcoming changes in ES6 and Angular 2.0 and it will be architected to take the upcoming transition into account. My github is littered with fiddles and bits of code not yet ready for deployment.</p>
+The repository is a version that  is heavily directive/module/component based using socket.io to push data from server to client. That is proceeding as I immerse myself in the upcoming changes in ES6 and Angular 2.0 and it will be architected to take the upcoming transition into account. My github is littered with fiddles and bits of code not yet ready for deployment.</p>
 <p>
 Authentication is by apikey. Server then creates a token that is sent with every request. This app is for multiple users sharing access to shopping lists from multiple, sometimes shared, devices. Angular and Node will need to deal with cross domain issues.
 </p>
