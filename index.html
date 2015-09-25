@@ -25,6 +25,9 @@
           <p><a href="http://sitebuilt.net"></a><a href="http://sitebuilt.net">http://sitebuilt.net</a><br><a href="mailto:mckenna.tim@gmail.com"></a><a href="mailto:mckenna.tim@gmail.com">mckenna.tim@gmail.com</a><br><br></p>          
           <div id="menu" >
             <ul class='nav navbar-nav'>
+              <li><a href="#react" title="react">react</a></li>
+              <li><a href="#pi" title="pi">pi</a></li>
+              <li><a href="#token" title="token">token</a></li>
               <li><a href="#hacks" title="hacks">hackathons</a></li>
               <li><a href="#gists" title="gists">gists&plnkrs</a></li>
               <li><a href="#node" title="nodeJS and TDD">node+TDD</a></li>
@@ -44,6 +47,39 @@
       <section id="main_content" class="inner">
 
 <h2>GitHub Repositories</h2>
+
+<h3><a id="cascada" href="https://github.com/mckennatim/cascada-webpack" >IOT garden home automation React app</a></h3>
+<p>ReactJs, ServerSentEvents<br>
+<a href="https://github.com/mckennatim/cascada-webpack">repository: cascada-webpack</a><br/>
+
+<p>
+Cascada-webpack is a React version of a front end for controlling a pond with a waterfall and watering stations in the garden. The back end is a raspberry Pi with a few relays, running python and flask to create a restful API.
+
+The project uses Server Sent Events (SSE) to allow any connected device to display the state of the system and its timers. The SSEs modify the state of the root component Yard which then get propogated down to any child component that needs to exhibit that change. Each watering station is represented by a Spot React component and there is a Pond component. Each runs on a separate thread in the pi and both use a custom generic button component Butt whose props modify its size, image, animation, content and look.
+
+From a tooling perspective this is a minimalist approach to a React application that uses ES6 via bablify and webpack.
+</p>
+
+<h3><a id="pi" href="https://github.com/mckennatim/cascada2pi" >IOT garden home automation raspberry Pi server</a></h3>
+<p>Python, Gevent, Flask, ServerSentEvents<br>
+<a href="https://github.com/mckennatim/cascada2pi">repository: cascada2pi</a><br/>
+
+<p>
+An Internet of Things (IOT) project using relays and electronics controlled by a raspberry Pi. Project is used for outdoor water control. It turns on and off and sets timers for outdoor watering and controls a two ponds and the waterfall between them injecting new water as needed.
+
+Project uses python running forever through supervisrctl. gevent and flask provide the web framework for a Restful API that uses ServerSentEvents(SSE) to notify internet connected devices as to the state of the system. Each garden device is controlled on its own thread
+</p>
+
+<h3><a id="token" href="https://github.com/mckennatim/token-auth-server" >Token Authentication Server</a></h3>
+<p>A Node, Express, Passport and MongoDb CORS server<br>
+<a href="https://github.com/mckennatim/token-auth-server">repository: token-auth-server</a><br/>
+
+<p>
+Token authorization via APIkey. User registers with name and email and gets an apikey sent to their email address. Entering that apikey with your username returns a token which would is stored stored in the browser's localStorage. Protected areas on the server require an token to be sent with each request.
+
+Allows Cross-Origin-Resource-Sharing (CORS). MongoDb stores records for each user containing (at least) name, email and apikey.
+</p>
+
 <h3><a id="hacks" href="http://plnkr.co/users/mckennatim/favorites" title="">hackathons</a></h3>
 <ul>
   <li><a  href="https://github.com/mckennatim/boggedbus" title="">repository</a></li>
