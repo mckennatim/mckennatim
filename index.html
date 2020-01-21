@@ -73,6 +73,8 @@ Cascada-webpack is a React version of a front end for controlling a pond with a 
 The project uses Server Sent Events (SSE) to allow any connected device to display the state of the system and its timers. The SSEs modify the state of the root component Yard which then get propogated down to any child component that needs to exhibit that change. Each watering station is represented by a Spot React component and there is a Pond component. Each runs on a separate thread in the pi and both use a custom generic button component Butt whose props modify its size, image, animation, content and look.
 
 From a tooling perspective this is a minimalist approach to a React application that uses ES6 via bablify and webpack.
+
+I had trouble with the pi's memory card. Multiple writes made it unstable. It may have been that I should have disabled logging.
 </p>
 
 <h3><a id="pi" href="https://github.com/mckennatim/cascada2pi" >IOT garden home automation raspberry Pi server</a></h3>
